@@ -1,0 +1,44 @@
+/*
+Program: findName
+Version: 1.1
+Created: 9/27/19
+Revised: 10/1/19
+Files: findName.cpp, findName.sh, Makefile, readme
+Programmer: Samuel Dunny
+Course: CSCE-215
+Assignment: Final Project
+Compiler: GNU Gcc version 4.2.3
+Target: Linux
+
+Description:
+
+        This program allows the user to search a username in the CSCE-215 database for the
+        Fall of 2019, and implements a cpp program
+
+Revisions:
+
+        This entire project was a major revision.
+        Rev. 10/2/19 14.38: fixed issue where the findName.cpp wouldn't return an error if
+                            too many arguments were input
+
+Constants and Variables:
+
+        shell script findName.sh
+
+Instructions for Use:
+
+        ```
+        $ tar xvf $USER.findname.tar
+        $ make
+        $ ./findName someuserid
+        ```
+
+Expected Results:
+
+        This program will have one of three results
+        1: outputs the correct username
+        2: returns an error if the user is not found
+        3: returns an error if the input arguments arent valid
+
+        The "Instructions for Use" should open the tar file, make a new findName program,
+        and should return one of the 3 options listed above
