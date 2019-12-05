@@ -1,0 +1,48 @@
+sdunny
+cocsce-l1d43-05
+09-09-2019 - 08:40:38 AM
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Part 1, Question 1:
+
+        # cuts on the delimeter "," and reports back the 14th column of polls.csv
+        cut -d ',' -f14 polls.csv
+
+Part 1, Question 2:
+
+        # does the same process as p1q1, but then pipes it to sort,
+        #  which is then piped to uniq to cut out repetitive lines
+        cut -d ',' -f14 polls.csv | sort | uniq | wc -l
+
+Part 2, Question 1:
+
+        # translates all words in the range of characters A-Z to a-z
+        tr A-Z a-z </usr/local/tmp/csce215/Words
+
+Part 2, Question 2:
+
+        # removes lines starting at line 2 and stepping with 2
+        sed '2~2d' /usr/local/tmp/csce215/Words
+
+        # commands 1 and 2 pipelined into the same command, puts output into file 'word'
+        tr A-Z a-z </usr/local/tmp/csce215/Words | sed '2~2d' > words
+
+Part 2, Question 3:
+
+        # grep searches for a pattern in the file, in this case 6 letters. grep -c counts them
+        # I used the command 'fromdos words' to remove all the hidden ^M characters
+        grep -c '^......$' words
+
+Part 2, Question 4:
+
+        # searches for all words that start b OR d, and is 5 letters total
+        grep -c '^[bd]....$' words
+
+Part 2, Question 5:
+
+        # searches the 'word' file for all words that have at least 6 consonents in a row,
+        # regardless of what the word starts with or how long it is
+        grep '[^aeiou][^aeiou][^aeiou][^aeiou][^aeiou][^aeiou]' words
+
+------------------------------------------------------------------------------------------------------------------------------
