@@ -1,0 +1,4 @@
+#!/bin/bash
+
+#takes first 53 lines, only reports back last 51
+head -n 53 $1 /usr/local/tmp/csce215/election2008/*/*.csv | tail -n 51 $1
