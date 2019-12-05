@@ -1,0 +1,43 @@
+sdunny
+cocsce-l1d43-01
+08-28-2019 - 06:26:57 PM
+
+-------------------------------------------------------------------------------------
+
+#Question 1:
+
+        find /usr/local/tmp/csce215/election2008/ -name '*.csv' -print
+
+
+#Question 2:
+
+        find /usr/local/tmp/csce215/election2008/Jul -name '*.csv' -print
+
+
+#Question 3:
+
+        find /usr/local/tmp/csce215/election2008/Aug/ -name Aug0[1-9].csv     #lists f                                       irst 9 days of August by date
+
+     #OR
+
+        find /usr/local/tmp/csce215/election2008/Aug -name '*.csv' | head -9  #lists f                                       irst 9 days of August by file placement
+
+
+#Question 4:
+
+        find /usr/local/tmp/csce215/election2008/ -name Jun0[1-9].csv -o -name Jul0[1-                                       9].csv   #lists all .csv files from the first 9 days of July and June by date
+
+
+#Question 5:
+
+        find /usr/local/tmp/csce215/election2008 -name 'Jan*.csv' -o -name 'Feb*.csv'                                        -o -name 'Mar*.csv' -o -name 'Apr*.csv' -o -name 'May*.csv' -o -name 'Jun*.csv' -o -na                                       me 'Jul*.csv' -o -name 'Aug0[1-9].csv'   #lists all .csv files before August 10th by d                                       ate
+
+     #OR
+
+        find /usr/local/tmp/csce215/election2008 -name '*.csv' | head -118   #lists al                                       l .csv files before August 10th by file placement
+
+
+
+#Question 6:
+
+         find /usr/local/tmp/csce215/election2008/ -name '*.csv' -exec ./extractdata {                                       } \;
